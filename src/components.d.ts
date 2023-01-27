@@ -7,8 +7,11 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    HelloWorld: typeof import('./components/HelloWorld.vue')['default']
+    Interface: typeof import('./components/interface.vue')['default']
+    Mcomputed: typeof import('./components/mcomputed.vue')['default']
+    Memit: typeof import('./components/memit.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Status: typeof import('./components/status.vue')['default']
   }
 }

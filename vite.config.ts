@@ -18,7 +18,10 @@ export default ({ mode }) => {
 
       // https://github.com/hannoeru/vite-plugin-pages
       Pages({
-        extensions: ['vue']
+        extensions: ['vue'],
+        dirs: [
+          { dir: 'src/pages', baseRoute: '' }
+        ],
       }),
 
       // https://github.com/intlify/bundle-tools/tree/main/packages/unplugin-vue-i18n
@@ -56,6 +59,7 @@ export default ({ mode }) => {
         dts: "src/auto-imports.d.ts",
         dirs: [ // Folder auto imports to create global variables
           "src/composables/js",
+          "src/types",
           "src/stores/**"
         ],
         vueTemplate: true,
